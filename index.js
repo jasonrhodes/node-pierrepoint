@@ -24,8 +24,18 @@ Pierrepoint.prototype.log = function (msg, options) {
 };
 
 Pierrepoint.prototype.error = function (msg, options) {
-    console.error(msg);
+    msg = "ERROR: " + msg;
+    options = options || {};
+    options.color = 'red';
+    this.log(msg, options);
 };
+
+Pierrepoint.prototype.success = function (msg, options) {
+    msg = "[✓] " + msg;
+    options = options || {};
+    options.color = 'green';
+    this.log(msg, options);
+}
 
 Pierrepoint.prototype.run = function (i) {
     var order;
@@ -34,7 +44,7 @@ Pierrepoint.prototype.run = function (i) {
     order = this.orders[i];
     if (!order) return;
     if (order.message) {
-        this.log(order.message, { color: 'blue' });
+        this.log(order.message, { color: order.color });
         this.run(++i);
     } else if (order.command) {
         //console.log(colors.purple + "Attempting to execute " + order.command + colors.none);
@@ -42,12 +52,10 @@ Pierrepoint.prototype.run = function (i) {
             //console.log(colors.purple + "Completed (?) " + order.command + colors.none);
             var condition = typeof order.condition === "function" ? order.condition(error, stdout, stderr) : error === null;
             if (condition) {
-                pp.log(order.description + " : " + '[✓]', { color: 'green' });
+                pp.success(order.description);
             } else {
-                pp.error(order.description + " : " + "FAILED", { color: 'red' });
-                console.error('Error:', error);
-                console.error('Stdout:', stdout);
-                console.error('Stderr:', stderr);
+                pp.error(order.description + " (failed)");
+                console.error('Error Object:', error, 'STDOUT:', stdout, 'STDERR:', stderr);
                 if (!order.continueOnFail) { return false; }
             }
             pp.run(++i);

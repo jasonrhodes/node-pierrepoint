@@ -45,8 +45,8 @@ albert.run();
 
 Each object in the orders array that you pass to the Pierrepoint constructor can contain the following properties:
 
-* **message**: If the order contains a message, no command or condition will be attempted. The message will be output (using the color if provided), and the next order will be evaluated immediately. _Note: available colors include: black, red, green, yellow, blue, purple, cyan, and white.
-* **color**: Optional color to use for a message
+* **message**: If the order contains a message, no command or condition will be attempted. The message will be output (using the color if provided), and the next order will be evaluated immediately.
+* **color**: Optional color to use for a message (black, red, green, yellow, blue, purple, cyan, and white)
 * **description**: Describe the command for clarity. It's also used to print default feedback messages.
 * **command**: The CLI command to run
 * **condition**: Optional function to run, receives `error, stdout, stderr` from the exec callback and should return true or false, whether to proceed or not. By default, Pierrepoint checks if `error === null` as the condition.

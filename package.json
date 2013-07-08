@@ -13,7 +13,9 @@
   "keywords": [
     "cli",
     "execute",
+    "automation",
     "sync",
+    "synchronous",
     "exec"
   ],
   "author": "Jason Rhodes",

@@ -1,0 +1,23 @@
+{
+  "name": "pierrepoint",
+  "version": "0.0.1",
+  "description": "Execute a list of CLI commands in order without having to manage manually",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jasonrhodes/node-pierrepoint.git"
+  },
+  "keywords": [
+    "cli",
+    "execute",
+    "sync",
+    "exec"
+  ],
+  "author": "Jason Rhodes",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "95b2b5198bb803ef00b7a5432a99e24e5528cb3e"
+}

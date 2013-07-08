@@ -1,8 +1,8 @@
 var exec = require('child_process').exec;
 
 var colors = {
-    black: "\033[030m",
-    red: "\033[31m",
+    black: '\033[030m',
+    red: '\033[31m',
     green: '\033[32m',
     yellow: '\033[33m',
     blue: '\033[34m',
@@ -35,7 +35,7 @@ Pierrepoint.prototype.success = function (msg, options) {
     options = options || {};
     options.color = 'green';
     this.log(msg, options);
-}
+};
 
 Pierrepoint.prototype.run = function (i) {
     var order;

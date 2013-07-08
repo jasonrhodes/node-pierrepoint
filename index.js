@@ -37,7 +37,7 @@ Pierrepoint.prototype.success = function (msg, options) {
     this.log(msg, options);
 };
 
-Pierrepoint.prototype.run = function (i) {
+Pierrepoint.prototype.execute = function (i) {
     var order;
     var pp = this;
     i = i || 0;
@@ -45,7 +45,7 @@ Pierrepoint.prototype.run = function (i) {
     if (!order) return;
     if (order.message) {
         this.log(order.message, { color: order.color });
-        this.run(++i);
+        this.execute(++i);
     } else if (order.command) {
         //console.log(colors.purple + "Attempting to execute " + order.command + colors.none);
         exec(order.command, function (error, stdout, stderr) {
@@ -58,7 +58,7 @@ Pierrepoint.prototype.run = function (i) {
                 console.error('Error Object:', error, 'STDOUT:', stdout, 'STDERR:', stderr);
                 if (!order.continueOnFail) { return false; }
             }
-            pp.run(++i);
+            pp.execute(++i);
         });
     }
 };

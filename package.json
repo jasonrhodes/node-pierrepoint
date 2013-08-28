@@ -1,6 +1,6 @@
 {
   "name": "pierrepoint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Execute a list of CLI commands in order without having to manage manually",
   "main": "index.js",
   "scripts": {

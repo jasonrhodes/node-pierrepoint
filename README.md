@@ -1,7 +1,7 @@
 Pierrepoint
 ===========
 
-Automated CLI execution on demand.
+Pierrepoint executes so you don't have to.
 
 ## What is this?
 
@@ -13,9 +13,7 @@ It rhymes with "beer joint".
 
 ## Why did you call it that?
 
-All this library does is execute things on demand. My first choice, Texas, was [already taken](https://npmjs.org/package/texas), and [Albert Pierrepoint](http://en.wikipedia.org/wiki/Albert_Pierrepoint) **executed** at least 400 criminals as a long-serving hangman in England in the mid 20th century.
-
-(Maybe I should have gone with _RickPerry_?)
+My first choice, Texas, was [already taken](https://npmjs.org/package/texas), and [Albert Pierrepoint](http://en.wikipedia.org/wiki/Albert_Pierrepoint) **executed** at least 400 criminals as a long-serving hangman in England in the mid 20th century.
 
 ## How do I use it?
 

@@ -1,7 +1,7 @@
 Pierrepoint
 ===========
 
-Pierrepoint executes so you don't have to.
+Automated CLI execution on demand.
 
 ## What is this?
 
@@ -13,7 +13,9 @@ It rhymes with "beer joint".
 
 ## Why did you call it that?
 
-My first choice, Texas, was [already taken](https://npmjs.org/package/texas), and [Albert Pierrepoint](http://en.wikipedia.org/wiki/Albert_Pierrepoint) **executed** at least 400 criminals as a long-serving hangman in England in the mid 20th century.
+All this library does is execute things on demand. My first choice, Texas, was [already taken](https://npmjs.org/package/texas), and [Albert Pierrepoint](http://en.wikipedia.org/wiki/Albert_Pierrepoint) **executed** at least 400 criminals as a long-serving hangman in England in the mid 20th century.
+
+(Maybe I should have gone with _RickPerry_?)
 
 ## How do I use it?
 
@@ -40,7 +42,7 @@ var albert = new Pierrepoint([
     }
 ]);
 
-albert.run();
+albert.execute();
 ```
 
 Each object in the orders array that you pass to the Pierrepoint constructor can contain the following properties:

@@ -40,7 +40,8 @@ var albert = new Pierrepoint([
     }
 ]);
 
-albert.execute();
+// Call Execute
+albert.run();
 ```
 
 Each object in the orders array that you pass to the Pierrepoint constructor can contain the following properties:
